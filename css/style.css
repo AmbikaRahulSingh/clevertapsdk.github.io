@@ -1,0 +1,297 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+
+#navbar{
+    display: flex;
+    align-items: center;
+    /* position: sticky; */
+    /* top: 0px; */
+}
+
+#navbar::before{
+    content: ""; /*gets a blank black box*/
+    background-color: black;
+    position: absolute; /*gap gets removed - based on parent position*/
+    top:0px;
+    left:0px;/*as position: absolute; the left property sets the left edge of an element to a unit to the left of the left edge of its nearest positioned ancestor.*/
+    height: 100%;
+    width:100%;
+    z-index: -1; /*brings our content on top of black box*/
+    opacity: 0.05; /*lightens the background */
+}
+
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 8px 54px;
+}
+
+#logo img{
+    margin: 7px 3px;
+    height: 98px;
+}
+
+
+/* Navigation Bar: List Styling */
+
+#navbar ul{
+    display: flex;
+    font-family: 'Baloo Bhai', cursive;
+}
+
+#navbar ul li{ 
+    list-style: none; /*dots gets removed*/
+    font-size: 1.8rem;
+}
+
+#navbar ul li a{
+    display: block;
+    padding: 3px 28px;
+    border-radius: 20px;
+    color: black;
+    text-decoration:none; /*underline gets removed*/
+}
+
+#navbar ul li a:hover{
+    color: white;
+    background-color: black;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding:3px 200px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before{ 
+    content: "";
+    position: absolute;
+    background: url('../img/bg.jpg') no-repeat center center/cover;/* Cover -Resize the background image to cover the entire container */
+    filter: invert(100%);
+    -webkit-filter: invert(25%);
+    height: 642px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.5;
+}
+
+#home h1{
+    color:black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p{
+    color:black;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#home button{
+    margin: 17px;
+    border: 2px solid white;
+    padding: 3px 28px;
+    border-radius: 20px;
+    background-color: rgb(192, 22, 22);
+    color: white;
+    font-size: 1.6rem;
+    font-family: 'Baloo Bhai', cursive;
+    cursor:pointer;
+}
+
+#home button:hover{
+   background-color: black;
+   transform: scale(1.1);
+}
+
+/* Menu Section */
+#menu{
+    margin: 59px 19px;
+    display: flex;
+}
+#menu .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 55px;
+    border-radius: 28px;
+    background:#ffffff;
+    margin-bottom: 20px;
+    cursor:pointer;
+    
+}
+
+#menu .box:hover{
+    transform: scale(1.1);
+ }
+
+#menu .box img{ 
+   height: 170px;
+   margin: auto;
+   display: block;
+}
+
+#menu .box p{
+    font-family: 'Bree Serif', serif;
+    color:black;
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    
+} 
+
+/* Services Section */
+#services{
+    margin: 75px 120px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 25px;
+    border-radius: 28px;
+    background:#ffffff;
+    margin-bottom: 20px;
+    cursor:pointer;
+    
+}
+
+#services .box:hover{
+    transform: scale(1.1);
+ }
+
+#services .box img{ 
+   height: 170px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Bree Serif', serif;
+
+} 
+
+/* Stores Section */
+#city{
+    height: 386px;
+    background-color: #f3f5f20d;
+    border: 2px solid brown;
+}
+
+#city ul{
+    column-count: 4;
+    font-family: 'Baloo Bhai', cursive;
+    margin:60px;
+}
+
+#city ul li{ 
+    display: block;
+    list-style: none; /*dots gets removed*/
+    font-size: 1.4rem;
+}
+
+#city ul li a{
+    padding: 3px 28px;
+    border-radius: 20px;
+    color: black;
+    text-decoration:none; /*underline gets removed*/
+}
+
+#city ul li a:hover{
+    color: white;
+    background-color: rgb(146, 144, 144);
+}
+
+/* Offers Section */
+
+#offer{
+    position: relative;
+}
+#offer::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    background: url('/Project-2/img/contact.jpg') no-repeat center center/cover;
+
+}
+#offer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#offer-box form{
+    width: 45%;
+}
+
+#offer-box .form-group input {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    display: block;
+    width: 508px;
+    padding: 1px;
+    border: 2px solid black;
+    margin: 31px auto;
+    font-size: 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#offer-box .btn {
+    font-family: 'Baloo Bhai', cursive;
+    margin: 15px 8px;
+    background-color: black;
+    color: white;
+    padding: 10px 10px;
+    border: 6px solid grey;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+#offer-box .btn:hover {
+    background-color: rgb(146, 144, 144);
+    color: black;
+}
+
+footer{
+    background: black;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+}
+
+/* Utility Classes */
+.h-primary{
+    font-family: 'Bree Serif', serif;
+    font-size: 3.8rem;
+    padding: 12px;   
+}
+
+.h-secondary{
+    font-family: 'Bree Serif', serif;
+    font-size: 2.3rem;
+    padding: 12px;
+}
+
+.center{
+    text-align: center;
+}
